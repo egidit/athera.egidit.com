@@ -79,6 +79,43 @@
         <!-- Left: Contact form -->
         <div class="reveal">
           <p class="t-label" style="margin-bottom:2rem;">Send us a message</p>
+
+          <!--
+            ⚠ CONTACT FORM — NOT FUNCTIONAL AS-IS
+            ─────────────────────────────────────────────────────
+            This form currently uses a mailto: action, which simply
+            attempts to open the user's default email client. It is
+            unreliable: many users have no desktop mail client configured,
+            the data formatting is poor, and there is no confirmation or
+            error handling.
+
+            TO MAKE THIS FORM WORK, replace the <form> action with one
+            of these approaches:
+
+            1. THIRD-PARTY FORM SERVICE (no backend required)
+               - Formspree:   <form action="https://formspree.io/f/YOUR_ID" method="POST">
+               - Web3Forms:   <form action="https://api.web3forms.com/submit" method="POST">
+                              (add a hidden input with your access_key)
+               - Getform:     <form action="https://getform.io/f/YOUR_ID" method="POST">
+               Sign up, get an endpoint, swap the action URL, done.
+
+            2. SERVERLESS FUNCTION
+               Deploy a small function (AWS Lambda, Cloudflare Worker,
+               Netlify Function, etc.) that receives the POST, validates
+               it, and sends an email via SMTP or an email API (SendGrid,
+               Mailgun, SES, etc.).
+
+            3. TRADITIONAL BACKEND
+               If you already run a server, add a POST endpoint that
+               handles validation, rate-limiting, and email dispatch.
+
+            Whichever option you choose, also add:
+            - Client-side JS to submit via fetch() and show success/error
+              messages inline instead of navigating away.
+            - Honeypot or reCAPTCHA to prevent spam.
+            - Server-side validation and rate-limiting.
+            ─────────────────────────────────────────────────────
+          -->
           <form class="contact-form" action="mailto:info@atheratech.com" method="post" enctype="text/plain">
             <div class="form-row">
               <div class="form-group">
