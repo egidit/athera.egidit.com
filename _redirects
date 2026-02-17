@@ -1,8 +1,0 @@
-# ═══════════════════════════════════════════════════
-# _redirects — Netlify compatible
-# ═══════════════════════════════════════════════════
-
-# Force HTTPS (Netlify handles this automatically, but explicit is good)
-http://atheratech.com/*    https://www.atheratech.com/:splat  301!
-http://www.atheratech.com/*  https://www.atheratech.com/:splat  301!
-https://atheratech.com/*   https://www.atheratech.com/:splat  301!
